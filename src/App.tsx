@@ -17,9 +17,8 @@ function App() {
   const [, setCurrentPage] = useState('home'); // ✅ Add this line
 
   return (
-    <Router>
+    <Router basename="/health-care">
     <div className="min-h-screen bg-white">
-      <BrowserRouter basename="/health-care">
       <Navigation />
       <Routes>
           <Route path="/" element={<Homepage onPageChange={setCurrentPage} />} />
@@ -30,7 +29,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/dashboard" element={<HealthDashboard />} />
         </Routes>
-      </BrowserRouter>
       {/* Footer */}
       <footer className="bg-sky-950 text-white py-12">
         <div className="max-w-7xl mx-auto px-4">
