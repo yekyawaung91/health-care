@@ -17,7 +17,7 @@ function App() {
   const [, setCurrentPage] = useState('home'); // ✅ Add this line
 
   return (
-    <Router basename="/health-care">
+    <Router basename="/">
     <div className="min-h-screen bg-white">
       <Navigation />
       <Routes>
